@@ -14,6 +14,7 @@ const Home = () => {
       <Navbar first="Inicio" second="Proyectos" Logo={Imagen} miniLogo={miniImagen}  />
       {/* <Navbar2 first="Inicio" second="Proyectos" Logo={Imagen} miniLogo={miniImagen}  /> */}
       <ItemListCoinainer/>
+      
       <itemCard/>
 
 
