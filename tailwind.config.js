@@ -1,9 +1,9 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx}" ],
+  content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       fontFamily: {
-        ubuntu: ["Ubuntu","sans-serif"]
+        ubuntu: ["Ubuntu", "sans-serif"]
 
       },
       colors: {
@@ -13,10 +13,13 @@ module.exports = {
         'dark-green1': '#03707D',
         'aqua': '#55B1A2',
         'blanquito': '#E8E6E4',
-        
+
       },
 
     },
   },
-  plugins: [],
+  plugins: [
+/*     require('@tailwindcss/aspect-ratio'),
+    // ... */
+  ],
 }
