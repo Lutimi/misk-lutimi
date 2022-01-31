@@ -5,7 +5,7 @@ import ItemCard from "../components/Cards/ItemCard"
 const ItemListCoinainer = ()  => {
     return(
          <div> 
-             <ItemCard/>
+             <ItemCard tittle="Postres"/>
          </div>
     )
 }
