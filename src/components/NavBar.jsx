@@ -5,11 +5,8 @@ import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import CartWidget from "./CartWidget";
 
 const data = {
-  main: [
-    { name: 'Luis'},
-    { correo: 'Lutimi@gmail.com' }, 
-  ],
-}
+  main: [{ name: "Luis" }, { correo: "Lutimi@gmail.com" }],
+};
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -49,7 +46,6 @@ function Navbar(props) {
                   >
                     {props.second}
                   </a>
-                  
                 </div>
               </div>
               <div className="flex-1 flex items-center justify-center px-2 space-x-20 lg:ml-6 lg:justify-end">
@@ -94,12 +90,8 @@ function Navbar(props) {
                   className="flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pinky"
                 >
                   <span className="sr-only">View notifications</span>
-                 <CartWidget/>
                 </button>
-
-
-             
-
+                <CartWidget />
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-4 relative flex-shrink-0">
                   <div>
@@ -126,18 +118,24 @@ function Navbar(props) {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Perfil
                           </a>
                         )}
                       </Menu.Item>
-                     
+
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(
+                              active ? "bg-gray-100" : "",
+                              "block px-4 py-2 text-sm text-gray-700"
+                            )}
                           >
                             Salir
                           </a>
@@ -167,7 +165,6 @@ function Navbar(props) {
               >
                 {props.second}
               </Disclosure.Button>
-              
             </div>
             <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-4">
@@ -179,16 +176,18 @@ function Navbar(props) {
                   />
                 </div>
                 <div className="ml-3">
-                  
-                  <div className="text-base font-medium text-gray-800">Misael</div>
-                  <div className="text-sm font-medium text-gray-500">lutimi@gmail.com</div>
+                  <div className="text-base font-medium text-gray-800">
+                    Misael
+                  </div>
+                  <div className="text-sm font-medium text-gray-500">
+                    lutimi@gmail.com
+                  </div>
                 </div>
                 <button
                   type="button"
                   className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                   <CartWidget />
-                  
+                  <CartWidget />
                 </button>
               </div>
               <div className="mt-3 space-y-1">
