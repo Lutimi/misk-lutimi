@@ -3,8 +3,9 @@ import ItemListCoinainer from "../components/ItemList";
 import miniImagen from "../assets/images/Character.png";
 import Imagen from "../assets/images/Logo.png";
 import Navbar from "../components/NavBar";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 import ItemDetail from "../components/ItemDetail";
 
 // url params

@@ -4,13 +4,6 @@ import { SearchIcon } from "@heroicons/react/solid";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-const data = {
-  main: [{ name: "Luis" }, { correo: "Lutimi@gmail.com" }],
-};
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 function Navbar(props) {
   return (
