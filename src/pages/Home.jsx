@@ -27,7 +27,7 @@ const Home = () => {
           <Route path="/category/:Categoryid" element={<ItemDetail />}></Route>
           <Route path="/detail" element={<ItemDetail />}></Route>
         </Routes>
-        <Footer className="fixed inset-x-0 bottom-0" />
+        <Footer />
       </div>
     </BrowserRouter>
   );
