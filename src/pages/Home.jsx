@@ -2,7 +2,7 @@ import React from "react";
 import ItemListCoinainer from "../components/ItemList";
 import miniImagen from "../assets/images/Character.png";
 import Imagen from "../assets/images/Logo.png";
-import Footer from "../components/Footer";
+import Footerr from "../components/Footerr";
 import Navbar from "../components/NavBar";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -14,7 +14,6 @@ const Home = () => {
   return (
     <BrowserRouter>
       <div className=" body  maw-w-7xl px-4 mx-auto">
-        <Footer />
         <Navbar
           first="Productos"
           second="Postres"
@@ -29,6 +28,7 @@ const Home = () => {
           <Route path="/category/:Categoryid" element={<ItemDetail />}></Route>
           <Route path="/detail" element={<ItemDetail />}></Route>
         </Routes>
+        <Footerr />
       </div>
     </BrowserRouter>
   );

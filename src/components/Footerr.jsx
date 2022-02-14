@@ -36,7 +36,7 @@ const navigation = {
   ],
 };
 
-function Footer(props) {
+function Footerr(props) {
   return (
     <footer
       className="bg-white 
@@ -77,4 +77,4 @@ function Footer(props) {
     </footer>
   );
 }
-export default Footer;
+export default Footerr;
