@@ -8,7 +8,6 @@ import ItemCard from "./Cards/Item";
 // import pinkycupcake from "../assets/images/pinkycupcake.png";
 // import Waffle from "../assets/images/Waffle.png";
 
-
 const products = [
   {
     id: 1,
@@ -19,6 +18,7 @@ const products = [
     imageAlt: "Sabores combinados",
     price: 35,
     stock: 12,
+    description: "sadad",
     sabor: "Fresa",
   },
   {
@@ -30,6 +30,7 @@ const products = [
     imageAlt: "Sabores combinados",
     price: 15,
     stock: 12,
+    description: "sadad",
     sabor: "Fresa",
   },
   {
@@ -41,6 +42,7 @@ const products = [
     imageAlt: "Sabores combinados",
     price: 20,
     stock: 12,
+    description: "sadad",
     sabor: "asdasd",
   },
   {
@@ -52,6 +54,7 @@ const products = [
     imageAlt: "Sabores combinados",
     price: 19,
     stock: 12,
+    description: "sadad",
     sabor: "Fresa",
   },
   {
@@ -63,6 +66,7 @@ const products = [
     imageAlt: "Sabores combinados",
     price: 28,
     stock: 12,
+    description: "sadad",
     sabor: "Fresa",
   },
 ];
@@ -77,7 +81,7 @@ const customFetch = (data) => {
       } else {
         reject("error");
       }
-    }, 2000);
+    }, 200);
   });
 };
 

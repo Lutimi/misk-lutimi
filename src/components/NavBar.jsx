@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { SearchIcon } from "@heroicons/react/solid";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import CartWidget from "./CartWidget";
-
+import { Link } from "react-router-dom";
 const data = {
   main: [{ name: "Luis" }, { correo: "Lutimi@gmail.com" }],
 };
@@ -32,23 +32,23 @@ function Navbar(props) {
                     alt="Logo"
                   />
                 </div>
-                <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
-                  {/* Current: "border-pinky text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <a
-                    href="#"
-                    className="border-pinky text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    {props.first}
-                  </a>
-                  <a
-                    href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
-                    {props.second}
-                  </a>
-                </div>
               </div>
-              <div className="flex-1 flex items-center justify-center px-2 space-x-20 lg:ml-6 lg:justify-end">
+              <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
+                {/* Current: "border-pinky text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
+                <div className="border-transparent hover:border-gray-300 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  <Link to="/"> {props.first}</Link>
+                </div>
+                <a className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  <Link to="/item"> {props.second}</Link>
+                </a>
+                <a className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                  {props.third}
+                </a>
+              </div>
+              <div
+                className=" flex items-center justify
+               px-2 space-x-4 lg:ml-6 lg:justify-end"
+              >
                 <div className="max-w-lg w-full lg:max-w-xs">
                   <label htmlFor="search" className="sr-only">
                     Buscar
@@ -69,6 +69,7 @@ function Navbar(props) {
                     />
                   </div>
                 </div>
+                <CartWidget />
               </div>
 
               <div className="flex items-center lg:hidden">
@@ -84,67 +85,14 @@ function Navbar(props) {
               </div>
               <div></div>
 
-              <div className="hidden lg:ml-4 lg:flex space-x-4 lg:items-center">
+              {/* <div className="hidden lg:ml-4 lg:flex space-x-4 lg:items-center">
                 <button
                   type="button"
                   className="flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pinky"
                 >
                   <span className="sr-only">View notifications</span>
                 </button>
-                <CartWidget />
-                {/* Profile dropdown */}
-                <Menu as="div" className="ml-4 relative flex-shrink-0">
-                  <div>
-                    <Menu.Button className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src={props.miniLogo}
-                        alt=""
-                      />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Perfil
-                          </a>
-                        )}
-                      </Menu.Item>
-
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Salir
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -156,7 +104,7 @@ function Navbar(props) {
                 href="#"
                 className="bg-indigo-50 border-pinky text-pinky block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
               >
-                {props.first}
+                L {props.first}
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
@@ -165,8 +113,13 @@ function Navbar(props) {
               >
                 {props.second}
               </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+              ></Disclosure.Button>
             </div>
-            <div className="pt-4 pb-3 border-t border-gray-200">
+            {/* <div className="pt-4 pb-3 border-t border-gray-200">
               <div className="flex items-center px-4">
                 <div className="flex-shrink-0">
                   <img
@@ -213,7 +166,7 @@ function Navbar(props) {
                   Sign out
                 </Disclosure.Button>
               </div>
-            </div>
+            </div> */}
           </Disclosure.Panel>
         </>
       )}

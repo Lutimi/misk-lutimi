@@ -21,7 +21,7 @@ const AddItem = (props) => {
       <button onClick={() => increment()}>
         <Plus />
       </button>
-      <div> {items} items</div>
+      <div> {items} </div>
 
       <button onClick={decrement}>
         <Minus />
