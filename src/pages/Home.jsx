@@ -3,7 +3,7 @@ import ItemListCoinainer from "../components/ItemList";
 import miniImagen from "../assets/images/Character.png";
 import Imagen from "../assets/images/Logo.png";
 import Navbar from "../components/NavBar";
-import Footer from "../components/Footer";
+
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import ItemDetail from "../components/ItemDetail";
@@ -27,7 +27,6 @@ const Home = () => {
           <Route path="/category/:Categoryid" element={<ItemDetail />}></Route>
           <Route path="/detail" element={<ItemDetail />}></Route>
         </Routes>
-        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
