@@ -1,11 +1,12 @@
 import React from "react";
-import ItemListCoinainer from "../components/ItemList";
+import ItemListCoinainer from "../components/ItemListContainer";
 import miniImagen from "../assets/images/Character.png";
 import Imagen from "../assets/images/Logo.png";
 import Footerr from "../components/Footerr";
 import Navbar from "../components/NavBar";
+import ItemDetailContainer from "../components/ItemDetailContainer.jsx";
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import ItemDetail from "../components/ItemDetail";
 
@@ -17,7 +18,8 @@ const Home = () => {
         <Navbar
           first="Productos"
           second="Postres"
-          third="Postres"
+          third="Platos"
+          fourth="Desayunos"
           Logo={Imagen}
           miniLogo={miniImagen}
         />
@@ -25,8 +27,11 @@ const Home = () => {
         <Routes>
           <Route path="/" element={<ItemListCoinainer />}></Route>
           <Route path="/item" element={<ItemDetail />}></Route>
-          <Route path="/category/:Categoryid" element={<ItemDetail />}></Route>
-          <Route path="/detail" element={<ItemDetail />}></Route>
+          <Route
+            path="/category/:idCategory"
+            element={<ItemListCoinainer />}
+          ></Route>
+          <Route path="/item/:idItem" element={<ItemDetailContainer />}></Route>
         </Routes>
         <Footerr />
       </div>
