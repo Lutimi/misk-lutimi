@@ -2,7 +2,7 @@ import React from "react";
 import AddToCart from "../button/AddToCart";
 import { Link } from "react-router-dom";
 
-function ItemCard({ id, imageSrc, imageAlt, href, name, sabor, price }) {
+function Item({ id, imageSrc, imageAlt, name, sabor, price }) {
   //Object destructuring
   return (
     <div className="group relative flex flex-col space-y-2  drop-shadow-2xl card">
@@ -10,18 +10,18 @@ function ItemCard({ id, imageSrc, imageAlt, href, name, sabor, price }) {
         className="w-full  min-h-80   aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-3/4
     lg:aspect-none aspect-v"
       >
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-full h-full object-center  lg:w-full lg:h-/4"
-        />
+        <Link to={`/item/${id}`}>
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="w-full h-full object-center  lg:w-full lg:h-/4"
+          />
+        </Link>
       </div>
       <div className="mt-4 flex w-4/4 justify-between">
         <div>
           <h3 className="text-sm text-gray-700">
-            <a className="text-base font-bold " href={href}>
-              {name}
-            </a>
+            <a className="text-base font-bold ">{name}</a>
           </h3>
           <p className="mt-1 text-sm text-gray-500">{sabor}</p>
         </div>
@@ -32,7 +32,7 @@ function ItemCard({ id, imageSrc, imageAlt, href, name, sabor, price }) {
 
       <div className=" flex justify-center items-center  ">
         <AddToCart name="Comprar" />
-        <Link to="/detail">
+        <Link to={`/item/${id}`}>
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,4 +56,4 @@ function ItemCard({ id, imageSrc, imageAlt, href, name, sabor, price }) {
   );
 }
 
-export default ItemCard;
+export default Item;
