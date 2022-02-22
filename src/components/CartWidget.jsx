@@ -4,17 +4,17 @@
 
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/solid";
-// import { ShoppingCartIcon } from '@heroicons/react/solid'
-import {
-  ChartBarIcon,
-  CursorClickIcon,
-  DocumentReportIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  ViewGridIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/outline";
+// import { ChevronDownIcon } from "@heroicons/react/solid";
+// // import { ShoppingCartIcon } from '@heroicons/react/solid'
+// import {
+//   ChartBarIcon,
+//   CursorClickIcon,
+//   DocumentReportIcon,
+//   RefreshIcon,
+//   ShieldCheckIcon,
+//   ViewGridIcon,
+//   ShoppingCartIcon,
+// } from "@heroicons/react/outline";
 
 const solutions = [
   {
@@ -47,8 +47,7 @@ const solutions = [
   },
   {
     name: "Automations",
-    description:
-      "Prueba de parrillast",
+    description: "Prueba de parrillast",
     href: "#",
     img: "https://i.picsum.photos/id/102/4320/3240.jpg?hmac=ico2KysoswVG8E8r550V_afIWN963F6ygTVrqHeHeRc",
     price: "$12",
@@ -133,12 +132,11 @@ function CartWidget() {
                         <p className="mt-1 text-sm text-gray-500">
                           {item.description}
                         </p>
-                        
                       </div>
 
                       <p className="mt-1 text-xl  text-gray-500">
-                          {item.price}
-                        </p>
+                        {item.price}
+                      </p>
                     </div>
                   ))}
                 </div>

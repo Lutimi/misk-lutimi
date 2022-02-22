@@ -1,9 +1,11 @@
 import React from "react";
-import Cake from "../assets/images/Cake.png";
-import AddToCart from "./button/AddToCart";
-import AddItem from "./Cards/AddItem";
+import ItemCount from "./Cards/ItemCount";
 
 const ItemDetail = ({ item }) => {
+  const onAdd = (qty) => {
+    alert("You have selected " + qty + " items.");
+  };
+
   return (
     <>
       {
@@ -14,16 +16,15 @@ const ItemDetail = ({ item }) => {
             alt=""
           />
           <div className="flex flex-col items-start justify-center space-y-4">
-            <p className="font-bold text-2xl"> {item.name}</p>
+            <p className="font-bold text-2xl text-pinky "> {item.name}</p>
             <p>{item.description}</p>
 
-            <p className="font-semibold ">Precio:${item.price} </p>
+            <p className="font-semibold ">Precio: ${item.price} </p>
 
             <h2>Stock: {item.stock} unidades</h2>
 
             <div className="flex space-x-4 ">
-              <AddItem />
-              <AddToCart name="AGREGAR PRODUCTO" />
+              <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
             </div>
           </div>
         </div>

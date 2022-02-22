@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function AddToCart(props) {
   return (
@@ -8,7 +9,7 @@ function AddToCart(props) {
       font-medium rounded-md shadow-sm text-white bg-aqua hover:bg-dark-green1 focus:outline-none focus:ring-2 
       focus:ring-offset-2 focus:ring-dark-green1"
     >
-      {props.name}
+      <Link to="/cart"> {props.name}</Link>
     </button>
   );
 }

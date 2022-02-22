@@ -32,6 +32,7 @@ const Home = () => {
             element={<ItemListCoinainer />}
           ></Route>
           <Route path="/item/:idItem" element={<ItemDetailContainer />}></Route>
+          <Route path="/cart"></Route>
         </Routes>
         <Footerr />
       </div>
