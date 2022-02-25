@@ -2,7 +2,7 @@ import React from "react";
 // import AddToCart from "../button/AddToCart";
 import { Link } from "react-router-dom";
 
-function Item({ id, imageSrc, imageAlt, name, sabor, price }) {
+function Item({ id, image, imageAlt, name, sabor, price }) {
   //Object destructuring
   return (
     <div className="group relative flex flex-col space-y-2  drop-shadow-2xl card">
@@ -12,7 +12,7 @@ function Item({ id, imageSrc, imageAlt, name, sabor, price }) {
       >
         <Link to={`/item/${id}`}>
           <img
-            src={imageSrc}
+            src={image}
             alt={imageAlt}
             className="w-full h-full object-center  lg:w-full lg:h-/4"
           />

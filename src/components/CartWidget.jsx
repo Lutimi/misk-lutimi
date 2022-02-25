@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   const test = useContext(CartContext);
 
-  console.log(test);
+  // console.log(test);
   return (
     <Link to="/cart">
       <button className="text-gray-900 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-offset-">

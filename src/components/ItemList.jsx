@@ -9,7 +9,7 @@ const ItemList = ({ items }) => {
             key={item.id}
             id={item.id}
             name={item.name}
-            imageSrc={item.imageSrc}
+            image={item.image}
             price={item.price}
             stock={item.stock}
           />

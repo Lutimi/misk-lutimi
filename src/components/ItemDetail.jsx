@@ -15,11 +15,11 @@ const ItemDetail = ({ item }) => {
   };
   return (
     <>
-      {item && item.imageSrc ? (
+      {item && item.image ? (
         <div className=" py-12 mx-auto max-w-7xl px-4 text-black grid  gap-x-4 grid-cols-2 place-content-center ">
           <img
             className="place-self-center rounded-2xl "
-            src={item.imageSrc}
+            src={item.image}
             alt=""
           />
           <div className="flex flex-col items-start justify-center space-y-4">
