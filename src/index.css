@@ -5,3 +5,12 @@
 .card {
   @apply bg-white  rounded-2xl p-4 shadow-md;
 }
+
+.button1 {
+  @apply p-3 rounded-sm flex justify-center items-center;
+}
+.button2 {
+  @apply inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm
+  font-medium rounded-md shadow-sm text-white bg-aqua hover:bg-dark-green1 focus:outline-none focus:ring-2 
+  focus:ring-offset-2 focus:ring-dark-green1;
+}

@@ -7,14 +7,16 @@ import Navbar from "../components/NavBar";
 import ItemDetailContainer from "../components/ItemDetailContainer.jsx";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import Cart from "../components/Cart";
 import ItemDetail from "../components/ItemDetail";
+
+import  CartContext  from "../components/CartContext";
 
 // url params
 const Home = () => {
   return (
-    <BrowserRouter>
-      <div className=" body  maw-w-7xl px-4 mx-auto">
+    <CartContext>
+      <BrowserRouter>
         <Navbar
           first="Productos"
           second="Postres"
@@ -23,20 +25,24 @@ const Home = () => {
           Logo={Imagen}
           miniLogo={miniImagen}
         />
-
-        <Routes>
-          <Route path="/" element={<ItemListCoinainer />}></Route>
-          <Route path="/item" element={<ItemDetail />}></Route>
-          <Route
-            path="/category/:idCategory"
-            element={<ItemListCoinainer />}
-          ></Route>
-          <Route path="/item/:idItem" element={<ItemDetailContainer />}></Route>
-          <Route path="/cart"></Route>
-        </Routes>
-        <Footerr />
-      </div>
-    </BrowserRouter>
+        <div className="maw-w-7xl px-4 mx-auto  ">
+          <Routes>
+            <Route path="/" element={<ItemListCoinainer />}></Route>
+            <Route path="/item" element={<ItemDetail />}></Route>
+            <Route
+              path="/category/:idCategory"
+              element={<ItemListCoinainer />}
+            ></Route>
+            <Route
+              path="/item/:idItem"
+              element={<ItemDetailContainer />}
+            ></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+          <Footerr />
+        </div>
+      </BrowserRouter>
+    </CartContext>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import AddToCart from "../button/AddToCart";
+// import AddToCart from "../button/AddToCart";
 import { Link } from "react-router-dom";
 
 function Item({ id, imageSrc, imageAlt, name, sabor, price }) {
@@ -31,7 +31,16 @@ function Item({ id, imageSrc, imageAlt, name, sabor, price }) {
       </div>
 
       <div className=" flex justify-center items-center  ">
-        <AddToCart name="Comprar" />
+        <Link
+          to={`/item/${id}`}
+          className="inline-flex items-center justify-center w-full px-4 py-2
+          border border-transparent text-sm font-medium rounded-md shadow-sm
+          text-white bg-aqua hover:bg-dark-green1 focus:outline-none
+          focus:ring-2 focus:ring-offset-2 focus:ring-dark-green1"
+        >
+          <button type="button">Comprar</button>
+        </Link>
+
         <Link to={`/item/${id}`}>
           <button>
             <svg
