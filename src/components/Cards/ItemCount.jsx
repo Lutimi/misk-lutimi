@@ -1,7 +1,7 @@
 import Plus from "../icons/Plus";
 import Minus from "../icons/Minus";
 import { useState, useEffect } from "react";
-import AddToCart from "../button/AddToCart";
+// import AddToCart from "../button/AddToCart";
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd }) => {
   const [count, setCount] = useState(0);
