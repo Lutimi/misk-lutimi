@@ -1,13 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
-// import customFetch from "../utils/customFetch";
 import { useParams } from "react-router";
-// import { products } from "../utils/products";
 import ItemList from "./ItemList";
-import db from "../utils/firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+// import db from "../utils/firebaseConfig";
+// import { collection, getDocs } from "firebase/firestore";
+import { firestoreFetch } from "../utils/firestoreFetch";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
   const { idCategory } = useParams();
 
@@ -15,17 +14,10 @@ const ItemListContainer = (props) => {
 
   //componentDidUpdate
   useEffect(() => {
-    const firestoreFetch = async () => {
-      const querySnapshot = await getDocs(collection(db, "products"));
-      return querySnapshot.docs.map((document) => ({
-        id: document.id,
-        ...document.data(),
-      }));
-    };
-    firestoreFetch()
+    firestoreFetch(idCategory)
       .then((result) => setProductos(result))
-      .catch((error) => console.log(error));
-  }, [productos]);
+      .catch((err) => console.log(err));
+  }, [idCategory]);
 
   return (
     <div>

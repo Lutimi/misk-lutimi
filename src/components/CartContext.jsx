@@ -14,12 +14,12 @@ const CartContextProvider = ({ children }) => {
           idItem: item.id,
           imgItem: item.image,
           nameItem: item.name,
-          precioItem: item.precio,
+          precioItem: item.price,
+          categoryItem: item.idCategory,
           qtyItem: qty,
         },
       ]);
     } else {
-      //al encontrarlo, entonces aumentamos el qty de ese producto
       found.qtyItem += qty;
       setCartList([...cartList]);
     }
