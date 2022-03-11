@@ -39,7 +39,7 @@ const Cart = () => {
     createOrderInFirestore()
       .then((result) =>
         alert(
-          "Your order has been created. Please take note of the ID of your order.\n\n\nOrder ID: " +
+          "Tu orden ha sido creada. Toma nota del id de tu pedido.\n\n\nOrder ID: " +
             result.id +
             "\n\n"
         )
